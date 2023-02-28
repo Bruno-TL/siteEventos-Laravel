@@ -24,6 +24,6 @@ class EventController extends Controller
         $event = $request->all();
         Event::create($event);
 
-        return redirect('/');
+        return redirect('/')->with('msg','Event created sucessfully');
     }
 }
