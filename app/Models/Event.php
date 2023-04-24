@@ -10,4 +10,7 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'description','city','private'];
+    protected $casts = [
+        'items' => 'array'
+    ];
 }
