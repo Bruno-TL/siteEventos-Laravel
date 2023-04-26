@@ -14,7 +14,7 @@ class AddTermsToEventsTable extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->json('items');
+            $table->json('terms');
         });
     }
 
@@ -26,7 +26,7 @@ class AddTermsToEventsTable extends Migration
     public function down()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn('items');
+            $table->dropColumn('terms');
         });
     }
 }
